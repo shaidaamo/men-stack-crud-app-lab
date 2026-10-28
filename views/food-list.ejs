@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>All Food</h1>
+    <% if(food.length === 0){ %> <p>No Food To Show Yet!</p><a href="/food/new">Write Your Own food here</a> <% } %>
+    <% for(let onefood of food){ %>
+       <p>Name: <%= onefood.name %> </p> 
+       <a href="/food/<%= onefood._id %>">See Food Details</a>
+    <% } %>
+</body>
+</html>

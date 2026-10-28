@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>Create New Food</h1>
+    <form action="/food" method="post">
+        <label for="name">Name :</label>
+        <input name="name" id="name" type="text">
+
+        <label for="ingredients">ingredients :</label>
+        <input name="ingredients" id="ingredients" type="text">
+
+        <button>Create Food</button>
+    </form>
+</body>
+</html>
